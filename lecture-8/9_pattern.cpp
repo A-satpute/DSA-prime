@@ -1,31 +1,21 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
-int main()
-{
+int main() {
     int n;
     cin>>n;
-    
-    for(int i=1;i<=n;i++)
-    {
-        for(int j=n;j>=2;j--)
-        {
-            if (i==j)
-            {
+    for(int i=1;i<=n;i++){
+        for(int j=n;j>=1;j--){
+            if(i==j){
+                //star
                 cout<<"* ";
             }
-            else
-            {
-                cout<<"  ";
+            else{
+                //number
+                cout<<j<<" ";
             }
-            
         }
-        
-       
         cout<<endl;
-        
     }
-    
-   
     return 0;
 }
