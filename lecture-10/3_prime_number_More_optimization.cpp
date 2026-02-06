@@ -13,7 +13,7 @@ int main()
         if(n%i==0)
         {
             ans=false;
-            break;
+           // break;
         }
     }
 
