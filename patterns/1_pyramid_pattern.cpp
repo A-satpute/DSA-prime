@@ -16,12 +16,16 @@ int main()
         {
             if(j==10)
             {
-                cout<<0;
+                cout<<0<<" ";
             }
             else
             {
                 cout<<j<<" ";
             }
+        }
+         for(int j=n-1;j>=n-i+1;j--)
+        {
+            cout<<j<<" ";
         }
         cout<<endl;
         
