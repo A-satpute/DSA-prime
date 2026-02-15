@@ -11,15 +11,7 @@ int main()
     while(n!=0)
     {
         int remainder=n%10;
-        count++;
-        if(count%2==0)
-        {
-            even=even+remainder;
-        }
-        else
-        {
-            odd=odd+remainder;
-        }
+        if(remainder==0)
         n=n/10;
     }
     cout<<odd<<endl;
