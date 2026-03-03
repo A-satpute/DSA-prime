@@ -8,18 +8,24 @@ void triplet(int n)
     {
         cin>>arr[i];
     }
-    //sourt array using sort function and algorithum package
+    //sort array using sort function and algorithum package
      sort(arr,arr+n-1);
     int target;
     cin>>target;
-    int i=0;
-    while(i<n)
+    int start=0;
+    int m=n-2;
+    int end=n-1;
+
+    while(start<m)
     {
-        int sum=arr[i]+arr[i+1]+arr[i+1];
+        int sum=arr[start]+arr[m]+arr[end];
         if(sum==target)
         {
-            cout<<arr[i]<<arr[i+1]<<arr[i+2];
+            cout<<arr[start]<<" "<<arr[m]<<" "<< arr[end];
         }
+        m--;
+        end--;
+        
     }
 }
 int main()
