@@ -25,7 +25,6 @@ int main()
             if(arr[i][j]==target)
             {
                 count++;
-                break;
             }
         }
     }
