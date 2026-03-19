@@ -17,35 +17,38 @@ int main()
     }
     while(left<=right && top<=down)
     {
-        
-        for(int i=top;i<=down;i++)
-        {
-            cout<<arr[i][left]<<", ";
-        }
-        left++;
-        
+        //left to right
         for(int i=left;i<=right;i++)
         {
-            cout<<arr[down][i]<<", ";
+            cout<<arr[top][i]<<" ";
         }
-        down--;
+        top++;
+        //top to down
+        for(int i=top;i<=down;i++){
+            //down
+            cout<<arr[i][right]<<" ";
+        }
+        right--;
 
         if(top<=down)
         {
-            for(int i=down;i>=top;i--)
-            {
-                cout<<arr[i][right]<<", ";
-            }
-            right--;
-        }
-        if(left<=right)
-        {
             for(int i=right;i>=left;i--)
             {
-                cout<<arr[top][i]<<", ";
+                cout<<arr[down][i]<<", ";
             }
-            top++;
+            down--;
+        }
+
+        if(left<=right)
+        {
+            for(int i=down;i>=top;i--)
+            {
+                cout<<arr[i][left]<<", ";
+            }
+            left++;
         }
     }
     cout<<"END";
+
+    return 0;
 }
