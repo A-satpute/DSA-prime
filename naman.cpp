@@ -1,26 +1,28 @@
 #include<iostream>
 using namespace std;
 
-
-bool isPalindrome(int x) {
-        int s=0;
-        while(x!=0)
-        {
-            int rem=x%10;
-            s=s*10+rem;
-            x=x/10;
-        }
-        if(s==x)
-        {
-            return true;
-        }
-        return false;
-    }
 int main()
 {
-    int x;
-    cin>>x;
-    isPalindrome(x);
-    
-
+    int n;
+    cin>>n;
+    int mat[n][n];
+    for(int i=0;i<n;i++)
+    {
+        for(int j=0;j<n;j++)
+        {
+            cin>>mat[i][j];
+        }
+    }
+     int sum=0;
+    for(int i=0;i<n;i++)
+    {
+        sum+=mat[i][i];
+        sum+=mat[i][n-i-1];
+    }
+    if(n%2==1)
+    {
+        sum-=mat[n/2][n/2];
+    }
+    cout<<sum;
+    return 0;
 }
