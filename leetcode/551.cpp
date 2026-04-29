@@ -24,7 +24,7 @@ bool checkRecord(string s) {
     return true;
 }
 int main() {
-    string s="PPPPALLPAPPP";
+    string s="PPALLPAP";
     cout<<checkRecord(s)<<endl;
     return 0;
 }
